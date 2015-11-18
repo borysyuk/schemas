@@ -141,7 +141,6 @@
             ],
             "propertyOrder": 40
           },
-
           "url": {
             "title": "URL",
             "description": "The URL for this resource.",
@@ -153,6 +152,22 @@
             "description": "The relative path to this resource.",
             "type": "string",
             "propertyOrder": 60
+          },
+          "data": {
+            "title": "Data",
+            "description": "The data for this resource.",
+            "oneOf": [
+              {
+                "type": "array"
+              },
+              {
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "propertyOrder": 65
           },
           "format": {
             "title": "Format",
@@ -225,7 +240,8 @@
         },
         "anyOf": [
           { "title": "url required", "required": ["url"] },
-          { "title": "path required", "required": ["path"] }
+          { "title": "path required", "required": ["path"] },
+          { "title": "data required", "required": ["data"] }
         ]
       }
     },
