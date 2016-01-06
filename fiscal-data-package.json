@@ -175,6 +175,7 @@
           "title": "Measures",
           "description": "Measures are numerical and correspond to financial amounts in the source data.",
           "type": "object",
+          "minProperties": 1,
           "patternProperties": {
             "^\\w+": {
               "type": "object",
@@ -204,6 +205,7 @@
           "title": "Dimensions",
           "description": "Dimensions are groups of related fields. Dimensions cover all items other than the measure.",
           "type": "object",
+          "minProperties": 1,
           "patternProperties": {
             "^\\w+": {
               "type": "object",
@@ -212,7 +214,7 @@
                   "title": "Attributes",
                   "description": "Attribute objects that make up the dimension",
                   "type": "object",
-                  "minItems": 1,
+                  "minProperties": 1,
                   "patternProperties": {
                     "^\\w+": {
                       "type": "object",
